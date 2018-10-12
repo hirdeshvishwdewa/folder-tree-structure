@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+      <link rel="stylesheet" href="./assets/css/file-explore.css" />
+
+    <link data-require="bootstrap-css@3.*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+
+    <script data-require="angular.js@1.6.5" data-semver="1.6.5" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script data-require="angular-animate@1.6.*" data-semver="1.6.5" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+    <script data-require="angular-touch@1.6.*" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-touch.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="2.5.0" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+
+  <body ng-app="thoughti">
+    <div ng-controller="ModalCtrl">
+      <h1>Root</h1>
+      <ul class="file-tree file-list">
+        <li data-parent="0" data-id="1" data-name="US" data-type="dir" class="folder-root open"><a href="#">US <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a>
+          <ul>
+            <li data-parent="1" data-id="2" data-name="New York" data-type="file" class="folder-root open"><a href="#">New York <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a>
+              <ul>
+                <li class="folder-root closed"><a href="#">Corporation <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a>
+                  <ul>
+                    <li> <a href="#link5">File 5 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link6">File 6 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link7">File 7 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link8">File 8 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li class="folder-root closed"> <a href="#">Deeper</a>
+                      <ul>
+                        <li><a href="#">File 1 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 2 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 3 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 4 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="folder-root closed"><a href="#">LLC <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a>
+                  <ul>
+                    <li> <a href="#link5">File 5 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link6">File 6 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link7">File 7 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li> <a href="#link8">File 8 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                    <li class="folder-root closed"> <a href="#">Deeper</a>
+                      <ul>
+                        <li><a href="#">File 1 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 2 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 3 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                        <li><a href="#">File 4 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#link2">File 2 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+            <li><a href="#link3">File 3 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+            <li><a href="#link4">File 4 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+          </ul>
+        </li>
+        <li class="folder-root closed"><a href="#">Canada <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a>
+          <ul>
+            <li><a href="#">File 1 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+            <li><a href="#">File 2 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+            <li><a href="#">File 3 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+            <li><a href="#">File 4 <span ng-click="open()">(+)</span> <span class="minus">(-)</span></a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+
+</html>
